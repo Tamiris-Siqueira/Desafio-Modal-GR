@@ -10,10 +10,13 @@ graus = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII']
 entradaNotas = []
 saidaGraus = []
 
+#cria uma ordem aleatoria para a lista de notas com um tamanho de 1 a 7
 entradaNotas = random.sample(notas, random.randint(1, 7))
 
 print(entradaNotas)
 
+#percorre a lista aleatoria de notas e compara com a lista de notas, 
+#caso seja igual, utiliza o indice para atribuir o grau correspondente
 for en in entradaNotas:
     for i in range(len(notas)):
         if en == notas[i]:
