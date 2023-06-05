@@ -47,12 +47,15 @@ while(opcoes < 1 or opcoes > 3):
 #limpa o terminal para facilitar visualização
 os.system('cls' if os.name == 'nt' else 'clear')
 
+print('Valor do empréstimo: R$', emprestimo)
+
+metadeValor = emprestimo
+if opcoes == 3:
+    print('Notas meio a meio:')
+    emprestimo = metadeValor / 2
+
 #incrementando as variaveis de contagem e decrementando o valor
 if opcoes == 1 or opcoes == 3:
-    if opcoes == 3:
-        print('Notas meio a meio:')
-        metadeValor = emprestimo / 2
-        emprestimo = metadeValor
     while(emprestimo >= 100):
         cem += 1
         emprestimo -= 100
@@ -77,6 +80,9 @@ if opcoes == 1 or opcoes == 3:
         dois += 1
         emprestimo -= 2 
 
+if opcoes == 3: 
+    emprestimo = metadeValor / 2
+
 if opcoes == 2 or opcoes == 3:
     if opcoes == 3: 
         emprestimo = metadeValor
@@ -100,7 +106,7 @@ if opcoes == 2 or opcoes == 3:
 if opcoes == 3:
     emprestimo = metadeValor * 2
 
-print('Valor do empréstimo: R$', emprestimo)
+emprestimo = metadeValor
 
 #exibindo a mensagem de acordo com as notas utilizadas
 if cem != 0:
